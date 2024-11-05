@@ -1,0 +1,72 @@
+/* MatrixEffect.css */
+
+@keyframes matrix-scroll {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0 100%;
+    }
+  }
+  
+  .matrix-background {
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.8), 
+      rgba(0, 0, 0, 0.8)
+    ),
+    url('https://path-to-your-matrix-code-image.png');
+    background-repeat: repeat;
+    
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .scroll-container {
+    height: 100vh;
+  }
+  
+  .didnt-have-enough {
+    position: absolute;
+    top: 17.5cm;
+    left: 10cm;
+    font-family: monospace;
+    color: #39ff14;
+    font-size: 3rem;
+  }
+  
+  .img4 {
+    position: absolute;
+    top: calc(17.5cm + 10cm);
+    left: 10cm;
+    width: auto;
+    height: auto;
+  }
+  
+  /* Optional: Styling for scrolling numbers */
+  .matrix-code {
+    font-family: monospace;
+    color: #39ff14;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 5s steps(30, end), blink-caret 0.75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #39ff14;
+    }
+  }
+  
